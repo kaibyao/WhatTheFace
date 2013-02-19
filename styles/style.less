@@ -1,0 +1,87 @@
+@skinny: 400;
+@buff: 600;
+@bold: 700;
+@gutter-size: 30px;
+
+div, section, header {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+}
+
+body {
+	background-color: #3298c7;
+	font-size: 16px;
+	font-family: 'Open Sans', 'Helvetica', sans-serif;
+	padding-bottom: (@gutter-size * 2);
+}
+
+.container {
+	width: 960px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: @gutter-size;
+	padding-right: @gutter-size;
+}
+
+header {
+	background: url('../images/logo.png') no-repeat scroll center top;
+	background-size: contain;
+
+	height: 147px;
+	margin-top: @gutter-size;
+}
+
+#main {
+	width: 600px;
+	height: 366px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: (@gutter-size * 2);
+	padding: @gutter-size;
+
+	background: url('../images/paper-bg.png') no-repeat scroll center top;
+
+	&.login {
+		text-align: center;
+	}
+}
+
+#user,
+#pass {
+	display: inline-block;
+}
+
+#user {
+	margin-top: @gutter-size;
+}
+
+#pass {
+	margin-top: @gutter-size;
+}
+
+.field-name,
+.login-field {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.field-name {
+	width: 80px;
+	padding-right: 10px;
+}
+
+.login-field {
+	width: 357px;
+	height: 30px;
+	padding-top: 5px;
+	padding-left: 5px;
+
+	background: url('../images/login-underline.png') no-repeat scroll left bottom;
+
+	text-align: left;
+}
