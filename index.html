@@ -10,22 +10,30 @@
 	<script src="scripts/wtface.js"></script>
 </head>
 <body>
+	<nav id="topnav" class="container"></nav>
 	<header class="container"></header>
 	<div class="container">
 		<section id="main" class="login">
+			<p class="intro">
+				Forget your classmates' names? No worries, play WTFace and memorize them!
+			</p>
 			<div id="user">
 				<span class="field-name">
 					<img src="images/login-user.png" alt="User">
 				</span>
-				<div class="login-field" contenteditable="true"></div>
+				<div class="login-field" contenteditable="true">&nbsp;</div>
 			</div>
 			<div id="pass">
 				<span class="field-name">
 					<img src="images/login-pass.png" alt="Pass">
 				</span>
-				<div class="login-field" contenteditable="true"></div>
+				<div class="login-field" contenteditable="true">&nbsp;</div>
 			</div>
-			<div id="login-buttons" class="buttons">
+			<div id="login-buttons" class="buttons-container">
+				<a href="app.html" class="button login"></a>
+				<span>or</span>
+				<a href="app.html" class="button facebook"></a>
+				<a href="#" class="forgot">Forgot your password?</a>
 			</div>
 		</section>
 	</div>

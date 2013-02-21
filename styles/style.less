@@ -1,7 +1,15 @@
 @skinny: 400;
 @buff: 600;
 @bold: 700;
+@huge-font: 60px;
+@big-font: 36px;
+@small-font: 14px;
+
 @gutter-size: 30px;
+
+@default-text: #333;
+@green: #98c732;
+@yellow: #fcee21;
 
 div, section, header {
 	box-sizing: border-box;
@@ -13,9 +21,31 @@ html, body {
 
 body {
 	background-color: #3298c7;
+	color: @default-text;
 	font-size: 16px;
 	font-family: 'Open Sans', 'Helvetica', sans-serif;
 	padding-bottom: (@gutter-size * 2);
+	line-height: 1.3;
+}
+
+a {
+	color: black;
+
+	&:hover {
+		color: @green;
+	}
+}
+
+h2 {
+	font-size: @big-font;
+	font-weight: @buff;
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
 }
 
 .container {
@@ -25,6 +55,13 @@ body {
 	margin-right: auto;
 	padding-left: @gutter-size;
 	padding-right: @gutter-size;
+	text-align: center;
+}
+
+#topnav {
+	height: @gutter-size;
+	text-align: right;
+	line-height: @gutter-size;
 }
 
 header {
@@ -32,15 +69,14 @@ header {
 	background-size: contain;
 
 	height: 149px;
-	margin-top: @gutter-size;
 }
 
 #main {
 	width: 600px;
 	height: 366px;
 	max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+	display: inline-block;
+	vertical-align: middle;
 	margin-top: (@gutter-size * 2);
 	padding: @gutter-size;
 
@@ -51,9 +87,24 @@ header {
 	}
 }
 
+.intro,
 #user,
 #pass {
 	display: inline-block;
+}
+
+.intro,
+#login-buttons {
+	max-width: 450px;
+}
+
+.intro {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	text-align: left;
+	font-weight: @buff;
+	font-size: 21px;
 }
 
 #user {
@@ -84,4 +135,170 @@ header {
 	background: url('../images/login-underline.png') no-repeat scroll left bottom;
 
 	text-align: left;
+}
+
+.button {
+	display: inline-block;
+	vertical-align: middle;
+
+	&.side {
+		background: url('../images/arrows.png') no-repeat scroll;
+		width: 38px;
+		height: 80px;
+
+		&.left {
+			background-position: left center;
+			margin-right: @gutter-size;
+		}
+
+		&.right {
+			background-position: -43px center;
+			margin-left: @gutter-size;
+		}
+	}
+
+	&.action {
+		border: 2px solid #333;
+		border-radius: 5px;
+		background-color: @green;
+		color: @yellow;
+		text-shadow: 0 0 2px #000;
+
+		font-weight: @buff;
+		text-decoration: none;
+	}
+}
+
+.buttons-container {
+	margin: @gutter-size auto 0;
+
+	text-align: center;
+}
+
+#login-buttons {
+	font-size: @big-font;
+	font-weight: @bold;
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: (@gutter-size / 2);
+		margin-right: (@gutter-size / 2);
+	}
+
+	.button {
+		&.login {
+			background: url('../images/login-btn.png') no-repeat scroll center center;
+			width: 172px;
+			height: 69px;
+		}
+
+		&.facebook {
+			background: url('../images/login-fb.png') no-repeat scroll center center;
+			width: 167px;
+			height: 60px;
+		}
+	}
+
+	.forgot {
+		font-size: @small-font;
+		font-weight: @skinny;
+		text-align: left;
+
+		display: block;
+		padding-left: 15px;
+		padding-top: 5px;
+	}
+}
+
+#pic-container,
+#profile {
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#pic-container {
+	padding-right: (@gutter-size / 2);
+	position: relative;
+
+	border: 3px solid @default-text;
+
+	.student-pic {
+		height: 100%;
+		margin-left: -8%;
+	}
+
+	.buttons-container {
+		position: absolute;
+		bottom: (@gutter-size / 2);
+		left: (@gutter-size / 2);
+	}
+}
+
+#profile {
+	padding-left: (@gutter-size / 2);
+
+	text-align: left;
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: (@gutter-size / 3);
+		font-size: 24px;
+	}
+
+	.names-list {
+		.name {
+			padding: (@gutter-size / 6);
+			margin-bottom: (@gutter-size / 6);
+
+			a {
+				color: @green;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+#people {
+	margin-top: @gutter-size;
+
+	.people-list,
+	.person {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.person {
+		margin-left: (@gutter-size / 2);
+
+		cursor: pointer;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	.student-pic {
+		display: block;
+		height: 100px;
+
+		border-radius: 50%;
+	}
+}
+
+.app {
+	.buttons-container {
+		margin-top: @gutter-size;
+
+		.edit {
+			padding: 5px 20px;
+		}
+	}
 }

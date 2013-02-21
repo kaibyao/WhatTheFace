@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<title>WhatTheFace</title>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://raw.github.com/bestiejs/lodash/v1.0.1/dist/lodash.min.js"></script>
+	<script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+	<script src="scripts/wtface.js"></script>
+</head>
+<body>
+	<nav id="topnav" class="container">
+		<a href="#">Log out</a>
+	</nav>
+	<header class="container"></header>
+	<div class="container">
+		<section id="main" class="app">
+			<div id="pic-container">
+				<img class="student-pic" src="images/profile-4.jpg" alt="">
+				<div class="buttons-container">
+					<a class="button action edit" href="edit.html">
+						Edit
+					</a>
+				</div>
+			</div>
+
+			<div id="profile">
+				<h2>Hi, my name is...</h2>
+				<ul class="names-list">
+					<li class="name"><a href="#">Bryan</a></li>
+					<li class="name"><a href="#">Pedro</a></li>
+					<li class="name"><a href="#">Benjamin</a></li>
+					<li class="name"><a href="#">Lars</a></li>
+				</ul>
+				<p class="bio-description">
+					I am an aspiring front-end developer.
+				</p>
+			</div>
+		</section>
+
+		<nav id="people">
+			<a href="#" class="button side left"></a>
+			<ul class="people-list">
+				<li class="person"><img src="images/profile-1.jpg" alt="" class="student-pic"></li>
+				<li class="person"><img src="images/profile-2.jpg" alt="" class="student-pic"></li>
+				<li class="person"><img src="images/profile-3.jpg" alt="" class="student-pic"></li>
+				<li class="person"><img src="images/profile-6.jpg" alt="" class="student-pic"></li>
+				<li class="person"><img src="images/profile-5.jpg" alt="" class="student-pic"></li>
+			</ul>
+			<a href="#" class="button side right"></a>
+		</nav>
+	</div>
+</body>
+</html>
