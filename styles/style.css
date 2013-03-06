@@ -8,18 +8,24 @@ body {
   margin: 0;
 }
 body {
-  background-color: #3298c7;
+  background-color: #348abf;
   color: #333333;
   font-size: 16px;
   font-family: 'Open Sans', 'Helvetica', sans-serif;
   padding-bottom: 60px;
   line-height: 1.3;
+  margin-top: 10px;
 }
 a {
   color: black;
+  text-decoration: none;
 }
 a:hover {
-  color: #98c732;
+  color: #fffebc;
+}
+a.forgot:hover {
+  color: black;
+  text-decoration: underline;
 }
 h2 {
   font-size: 36px;
@@ -45,6 +51,13 @@ ul {
   text-align: right;
   line-height: 30px;
 }
+.topnav-link {
+  margin-left: 30px;
+  padding: 2px 10px;
+}
+.topnav-link:first-child {
+  margin-left: 0;
+}
 header {
   background: url('../images/logo.png') no-repeat scroll center top;
   background-size: contain;
@@ -52,13 +65,13 @@ header {
 }
 #main {
   width: 600px;
-  height: 366px;
+  height: 400px;
   max-width: 100%;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 60px;
+  margin-top: 30px;
   padding: 30px;
-  background: url('../images/paper-bg.png') no-repeat scroll center top;
+  background: url('../images/paper-bg.png') no-repeat scroll center center;
 }
 #main.login {
   text-align: center;
@@ -95,11 +108,11 @@ header {
   padding-right: 10px;
 }
 .login-field {
-  width: 357px;
   height: 30px;
   padding-top: 5px;
   padding-left: 5px;
-  background: url('../images/login-underline.png') no-repeat scroll left bottom;
+  background: url('../images/login-underline.png') repeat-y scroll left bottom;
+  width: 357px;
   text-align: left;
 }
 .button {
@@ -123,16 +136,16 @@ header {
   border: 2px solid #333;
   border-radius: 5px;
   background-color: #98c732;
-  color: #fcee21;
+  color: #fffebc;
   text-shadow: 0 0 2px #000;
   font-weight: 600;
   text-decoration: none;
 }
-.buttons-container {
-  margin: 30px auto 0;
-  text-align: center;
+.button.action:hover {
+  background-color: #9dcd37;
 }
 #login-buttons {
+  margin: 30px auto 0;
   font-size: 36px;
   font-weight: 700;
 }
@@ -187,9 +200,11 @@ header {
   text-align: left;
 }
 #profile h2 {
-  margin-top: 0;
   margin-bottom: 10px;
   font-size: 24px;
+}
+#profile h2:first-child {
+  margin-top: 0;
 }
 #profile .names-list .name {
   padding: 5px;
@@ -227,4 +242,27 @@ header {
 }
 .app .buttons-container .edit {
   padding: 5px 20px;
+}
+.edit .button-container {
+  margin-top: 30px;
+}
+.profile-edit-title {
+  margin-top: 30px;
+}
+.edit-field {
+  height: 30px;
+  padding-top: 5px;
+  padding-left: 5px;
+  background: url('../images/login-underline.png') repeat-y scroll left bottom;
+  width: 99%;
+}
+.edit-field.description {
+  height: 120px;
+}
+.save {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
 }

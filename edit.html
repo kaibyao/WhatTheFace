@@ -11,13 +11,14 @@
 </head>
 <body>
 	<nav id="topnav" class="container">
-		<a href="#">Log out</a>
+		<a class="button action topnav-link" href="edit.html">Edit profile</a>
+		<a class="button action topnav-link" href="#">Log out</a>
 	</nav>
 	<header class="container"></header>
 	<div class="container">
-		<section id="main" class="app">
+		<section id="main" class="edit">
 			<div id="pic-container">
-				<img class="student-pic" src="images/profile-4.jpg" alt="">
+				<img class="student-pic" src="images/profile-7.jpg" alt="">
 				<div class="buttons-container">
 					<a class="button action edit" href="edit.html">
 						Edit
@@ -26,30 +27,17 @@
 			</div>
 
 			<div id="profile">
-				<h2>Hi, my name is...</h2>
-				<ul class="names-list">
-					<li class="name"><a href="#">Bryan</a></li>
-					<li class="name"><a href="#">Pedro</a></li>
-					<li class="name"><a href="#">Benjamin</a></li>
-					<li class="name"><a href="#">Lars</a></li>
-				</ul>
-				<p class="bio-description">
-					I am an aspiring front-end developer.
-				</p>
+				<h2 class="profile-edit-title">Hi, my name is...</h2>
+				<div class="edit-field" contenteditable="true">Kai</div>
+
+				<h2 class="profile-edit-title">Description</h2>
+				<div class="description edit-field" contenteditable="true">I work as a front-end developer.</div>
+
+				<div class="button-container">
+					<a class="button action save" href="app.html">Save</a>
+				</div>
 			</div>
 		</section>
-
-		<nav id="people">
-			<a href="#" class="button side left"></a>
-			<ul class="people-list">
-				<li class="person"><img src="images/profile-1.jpg" alt="" class="student-pic"></li>
-				<li class="person"><img src="images/profile-2.jpg" alt="" class="student-pic"></li>
-				<li class="person"><img src="images/profile-3.jpg" alt="" class="student-pic"></li>
-				<li class="person"><img src="images/profile-6.jpg" alt="" class="student-pic"></li>
-				<li class="person"><img src="images/profile-5.jpg" alt="" class="student-pic"></li>
-			</ul>
-			<a href="#" class="button side right"></a>
-		</nav>
 	</div>
 </body>
 </html>
